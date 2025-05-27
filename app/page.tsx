@@ -2,6 +2,7 @@ import { Link } from "@heroui/link";
 import { Snippet } from "@heroui/snippet";
 import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
+import ProgressBar from "~/components/progressBar";
 
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
@@ -48,6 +49,10 @@ export default function Home() {
             Get started by editing <Code color="primary">app/page.tsx</Code>
           </span>
         </Snippet>
+      </div>
+
+      <div className="mt-8 w-1/2">
+        <ProgressBar value={50} maxValue={100} label="Loading..." />
       </div>
     </section>
   );
